@@ -1,0 +1,254 @@
+
+:root {
+  /* Primary colors */
+  --color-light-red: hsl(356, 100%, 66%);
+  --color-very-light-red: hsl(355, 100%, 74%);
+  --color-very-dark-blue: hsl(208, 49%, 24%);
+  /* Neutral colors */
+  --color-white: hsl(0, 0%, 100%);
+  --color-grayish-blue: hsl(240, 2%, 79%);
+  --color-very-dark-grayish-blue: hsl(207, 13%, 34%);
+  --color-very-dark-black-blue: hsl(240, 10%, 16%);
+  /* Header gradient */
+  --color-hg-light-red: hsl(353, 100%, 62%);
+  --color-hg-very-light-red: hsl(13, 100%, 72%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 16px;
+  font-family: 'Overpass', sans-serif;
+  line-height: 1.8;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1.8rem;
+}
+
+::marker {
+  content: '';
+}
+
+.main-header {
+  position: relative;
+  background-image: url('./images/bg-pattern-intro.svg'),
+    linear-gradient(135deg,
+      var(--color-hg-very-light-red), var(--color-hg-light-red)
+  );
+
+  background-size: 200%;
+  background-position: center;
+
+  padding: 2rem;
+  margin-bottom: 5em;
+  border-radius: 0 0 0 30%;
+
+  color: var(--color-white);
+}
+
+.nav-bar {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.nav-bar h1 {
+  float: left;
+}
+
+
+/* Nav menu stuff */
+
+.nav-menu::-webkit-scrollbar {
+  background: none;
+  width: 5px;
+  border-radius: .35em;
+}
+.nav-menu::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg,
+    var(--color-hg-very-light-red),
+    var(--color-hg-light-red)
+  );
+  border-radius: .35em;
+}
+
+.nav-menu {
+  display: none;
+  background: var(--color-white);
+
+  font-size: 1.6rem;
+  text-align: center;
+
+  border-radius: .35em;
+  padding: 2em;
+
+  color: var(--color-very-dark-blue);
+  box-shadow: 0 2em 10em -5em black;
+
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  scrollbar-width: thin;
+
+  overflow: auto;
+}
+
+.is-visible {
+  display: block;
+}
+
+.nav-menu.is-visible {
+  position: fixed;
+  z-index: 1;
+  top: 5rem;
+  left: 2rem;
+  right: 2rem;
+  bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+body.no-scroll {
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+.nav-menu__item {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+
+.nav-menu-item_btn {
+  position: relative;
+  display: inline-block;
+  margin: auto;
+  background: none;
+  border: none;
+  color: inherit;
+  font-weight: 400;
+  font-size: inherit;
+}
+
+.nav-menu-item_btn::after {
+  content: '';
+  background-image: url('./images/icon-arrow-dark.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 10px;
+  position: absolute;
+  z-index: 2;
+  right: -14px;
+  top: -3px;
+  bottom: 0;
+  left: calc(100% + 14px - 10px);
+  transition: transform 550ms ease-out;
+}
+
+.nav-menu__link {
+  text-decoration: none;
+  display: block;
+  margin: 1em 1.5em;
+  color: inherit;
+  font-weight: 300;
+  font-size: 1.4rem;
+}
+
+.nav-menu__content {
+  display: none;
+  background-color: var(--color-grayish-blue);
+  color: var(--color-very-dark-grayish-blue);
+  margin: .4em 0;
+  padding: 1em 0;
+  border-radius: .35em;
+}
+
+.nav-menu-item_btn.show-content + .nav-menu__content {
+  display: block;
+  animation: slide-in 500ms linear;
+}
+
+.nav-menu-item_btn.show-content::after {
+  transform: rotate(180deg);
+}
+
+.nav-menu-item_btn.show-content {
+  color: var(--color-very-dark-grayish-blue);
+}
+
+.user-account {
+  margin-top: auto;
+
+  border-top: 2px solid var(--color-grayish-blue);
+
+  display: grid;
+  grid-template-columns: auto;
+  justify-items: center;
+  grid-gap: 2em;
+  padding: 2em 0;
+}
+
+#login-button {
+  font-weight: 400;
+  font-family: inherit;
+  font-size: 1.4rem;
+  color: var(--color-very-dark-blue);
+}
+
+#sign-up-button {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 400;
+  font-size: 1.3rem;
+  color: var(--color-white);
+  background: linear-gradient(90deg,
+    var(--color-hg-very-light-red),
+    var(--color-hg-light-red)
+  );
+  border-radius: 2em;
+  padding: .3em 2em;
+}
+
+/* ###Nav menu stuff### */
+
+.hamburger-icon {
+  background: url('./images/icon-hamburger.svg');
+  background-repeat: no-repeat;
+  background-size: content;
+  background-position-y: 60%;
+}
+
+.close-icon {
+  background: url('./images/icon-close.svg');
+  background-repeat: no-repeat;
+  background-size: content;
+  background-position-y: 60%;
+}
+
+#toggle-nav-menu-btn {
+  border: none;
+  min-width: 32px;
+  height: auto;
+  justify-self: right;
+}
+
+.button {
+  text-decoration: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+/* Animations */
+
+@keyframes slide-in {
+  0% {
+    opacity: .4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+

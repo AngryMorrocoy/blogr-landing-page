@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- ############ -->
+  <link rel="stylesheet" href="styles.css">
+  <script src="index.js"></script>
+
+  <title>Frontend Mentor | [Blogr]</title>
+
+</head>
+<body>
+  <header class="main-header">
+    <nav class="nav-bar">
+      <h1>Blogr</h1>
+      <ul class="nav-menu" id="nav-menu">
+        <li class="nav-menu__item">
+          <button class="button nav-menu-item_btn" tabindex=0>Product</button>
+          <section class="nav-menu__content">
+            <a href="#" class="nav-menu__link">Overview</a>
+            <a href="#" class="nav-menu__link">Pricing</a>
+            <a href="#" class="nav-menu__link">Marketplace</a>
+            <a href="#" class="nav-menu__link">Features</a>
+            <a href="#" class="nav-menu__link">Integrations</a>
+          </section>
+        </li>
+        <li class="nav-menu__item">
+          <button class="button nav-menu-item_btn" tabindex=0>Company</button>
+          <section class="nav-menu__content">
+            <a href="#" class="nav-menu__link">About</a>
+            <a href="#" class="nav-menu__link">Team</a>
+            <a href="#" class="nav-menu__link">Blog</a>
+            <a href="#" class="nav-menu__link">Careers</a>
+          </section>
+        </li>
+        <li class="nav-menu__item">
+          <button class="button nav-menu-item_btn" tabindex=0>Connect</button>
+          <section class="nav-menu__content" tabindex=0>
+            <a href="#" class="nav-menu__link">Contact</a>
+            <a href="#" class="nav-menu__link">LinkedIn</a>
+            <a href="#" class="nav-menu__link">Newsletter</a>
+          </section>
+        </li>
+        <section class="user-account">
+          <a class="button" id="login-button" href="">Login</a>
+          <a class="button" id="sign-up-button" href="">Sign Up</a>
+        </section>
+      </ul>
+      <button class="button hamburger-icon" id="toggle-nav-menu-btn"></button>
+    </nav>
+
+    <h2 class="header-slogan">A modern publishing platform</h2>
+    <p class="header-phrase">Grow your audience and build your online brand</p>
+    <section class="contact">
+      <a href="#" class="button" id="start-ff-btn">Start for Free</a>
+      <a href="#" class="button" id="learn-more-btn">Learn More</a>
+    </section>
+  </header>
+  <main class="main-content">
+    <section class="main-section">
+      <header class="main-section__header">
+        <h3>Designed for the future</h3>
+      </header>
+
+      <article class="main-section__article">
+        <h4 class="main-section__article-title">Introducing an extensible editor</h4>
+        <p class="main-section__article-content">
+          Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content.
+          The editor supports management of multiple blogs and allows easy manipulation of embeds such as images,
+          videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or
+          change the looks of a blog.
+        </p>
+      </article>
+
+      <article class="main-section__article">
+        <h4 class="main-section__article-title">Robust content management</h4>
+        <p class="main-section__article-content">
+        Flexible content management enables users to easily move through posts. Increase the usability of your blog
+        by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.
+        </p>
+      </article>
+    </section>
+
+    <section class="main-section">
+      <header class="main-section__header">
+        <h3>State of the Art Infrastructure</h3>
+        <p class="main-section__header-description">With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity.
+        This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.</p>
+      </header>
+      <article class="main-section__article">
+        <h4 class="main-section__article-title">Free, open, simple</h4>
+        <p class="main-section__article-content">
+        Blogr is a free and open source application backed by a large community of helpful developers. It supports
+        features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools,
+        and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.
+        </p>
+      </article>
+      Powerful tooling
+      Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but
+      capable of producing even the most complicated sites.
+    </section>  </main>
+  <footer class="main-footer">
+    <section class="footer-section">
+      <header class="footer-section__header">Product</header>
+
+      <a href="#" class="footer-section__link">Overview</a>
+      <a href="#" class="footer-section__link">Pricing</a>
+      <a href="#" class="footer-section__link">Marketplace</a>
+      <a href="#" class="footer-section__link">Features</a>
+      <a href="#" class="footer-section__link">Integrations</a>
+    </section>
+    <section class="footer-section">
+      <header class="footer-section__header">Company</header>
+
+      <a href="#" class="footer-section__link">About</a>
+      <a href="#" class="footer-section__link">Team</a>
+      <a href="#" class="footer-section__link">Blog</a>
+      <a href="#" class="footer-section__link">Careers</a>
+    </section>
+    <section class="footer-section">
+      <header class="footer-section__header">Connect</header>
+
+      <a href="#" class="footer-section__link">Contact</a>
+      <a href="#" class="footer-section__link">Newsletter</a>
+      <a href="#" class="footer-section__link">LinkedIn</a>
+    </section>
+  </footer>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+</body>
+</html>

@@ -6,8 +6,8 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <!-- Google fonts -->
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- <link rel="preconnect" href="https://fonts.gstatic.com"> -->
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet"> -->
   <!-- ############ -->
   <link rel="stylesheet" href="styles.css">
   <script src="index.js"></script>
@@ -54,22 +54,24 @@
       </ul>
       <button class="button hamburger-icon" id="toggle-nav-menu-btn"></button>
     </nav>
-
-    <h2 class="header-slogan">A modern publishing platform</h2>
-    <p class="header-phrase">Grow your audience and build your online brand</p>
-    <section class="contact">
-      <a href="#" class="button" id="start-ff-btn">Start for Free</a>
-      <a href="#" class="button" id="learn-more-btn">Learn More</a>
-    </section>
+    <div class="header-content">
+      <h2 class="header-slogan">A modern publishing platform</h2>
+      <p class="header-phrase">Grow your audience and build your online brand</p>
+      <section class="contact">
+        <a href="#" class="button contact-btn" id="start-free-btn">Start for Free</a>
+        <a href="#" class="button contact-btn" id="learn-more-btn">Learn More</a>
+      </section>
+    </div>
   </header>
   <main class="main-content">
     <section class="main-section">
-      <header class="main-section__header">
-        <h3>Designed for the future</h3>
-      </header>
+      <article class="main-section_article">
+        <h3 class="main-section__article-title">Designed for the future</h3>
+        <div id="editor-illustration" class="img-wrapper"></div>
+      </article>
 
       <article class="main-section__article">
-        <h4 class="main-section__article-title">Introducing an extensible editor</h4>
+        <h3 class="main-section__article-title">Introducing an extensible editor</h3>
         <p class="main-section__article-content">
           Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content.
           The editor supports management of multiple blogs and allows easy manipulation of embeds such as images,
@@ -79,7 +81,7 @@
       </article>
 
       <article class="main-section__article">
-        <h4 class="main-section__article-title">Robust content management</h4>
+        <h3 class="main-section__article-title">Robust content management</h3>
         <p class="main-section__article-content">
         Flexible content management enables users to easily move through posts. Increase the usability of your blog
         by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.
@@ -87,25 +89,34 @@
       </article>
     </section>
 
-    <section class="main-section">
-      <header class="main-section__header">
-        <h3>State of the Art Infrastructure</h3>
-        <p class="main-section__header-description">With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity.
+    <section class="dark-section main-section">
+      <article class="main-section_article">
+        <h3 class="main-section__article-title">State of the Art Infrastructure</h3>
+        <p class="main-section__article-content">With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity.
         This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.</p>
-      </header>
+      </article>
+    </section>
+    <section class="main-section">
       <article class="main-section__article">
-        <h4 class="main-section__article-title">Free, open, simple</h4>
+        <div id="laptop-illustration" class="img-wrapper"></div>
+        <h3 class="main-section__article-title">Free, open, simple</h3>
         <p class="main-section__article-content">
         Blogr is a free and open source application backed by a large community of helpful developers. It supports
         features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools,
         and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.
         </p>
       </article>
-      Powerful tooling
-      Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but
-      capable of producing even the most complicated sites.
-    </section>  </main>
+      <article class="main-section__article">
+        <h3 class="main-section__article-title">Powerful tooling</h3>
+        <p class="main-section__article-content">
+        Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but
+        capable of producing even the most complicated sites.
+        </p>
+      </article>
+    </section>
+  </main>
   <footer class="main-footer">
+    <h1 class="footer-header">Blogr</h1>
     <section class="footer-section">
       <header class="footer-section__header">Product</header>
 

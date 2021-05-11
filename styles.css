@@ -588,20 +588,119 @@ body.no-scroll {
 
   .main-section {
     display: grid;
+    padding-left: 0;
+    padding-right: 0;
   }
 
-  .main-section__title {
-    /* grid-area: title; */
+  #first-section {
+    grid-template: 25% 25% 50% / auto;
+    grid-template: "title title title" auto
+                   "article1 article1 image" auto
+                   "article2 article2 image" auto / 25% 25% auto;
+    overflow: hidden;
+    position: relative;
+    grid-gap: 1em;
+    padding-left: 7rem;
   }
 
-  .main-section__article {
+  #first-section .main-section__title {
+    grid-area: title;
   }
+
+  #first-section .main-section__article:first-of-type  {
+    grid-area: article1;
+  }
+
+  #first-section .main-section__article:first-of-type + .main-section__article {
+    grid-area: article2;
+  }
+
 
   #editor-illustration {
+    grid-area: image;
+    background: none;
+    position: relative;
+  }
+
+  #editor-illustration::after {
+    content: "";
     background: url('./images/illustration-editor-desktop.svg');
     background-repeat: no-repeat;
     background-position: center;
+    background-size: contain;
+
+    position: absolute;
+    top:    -20%;
+    left:   -20%;
+    right:  -20%;
+    bottom: -20%;
+
+    transform: translateX(25%);
   }
+
+  .dark-section {
+    padding-left: 50%;
+  }
+
+  .dark-section::after {
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    transform: translateX(-20%);
+  }
+
+  #third-section {
+    grid-template: 25% 25% 50% / auto;
+    grid-template: "image article1 article1" auto
+                   "image article2 article2" auto / auto 25% 25%;
+    grid-gap: 1em;
+    padding-right: 10rem;
+    justify-items: center;
+    margin-top: 4rem;
+  }
+
+  #third-section .main-section__title {
+    grid-area: title;
+  }
+
+  #third-section .main-section__article:first-of-type {
+    grid-area: article1;
+  }
+
+  #third-section .main-section__article:first-of-type + .main-section__article {
+    grid-area: article2;
+  }
+
+  #laptop-illustration {
+    grid-area: image;
+    background: none;
+    position: relative;
+  }
+
+  #laptop-illustration::after {
+    content: "";
+    background: url("./images/illustration-laptop-desktop.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    position: absolute;
+    top:    -20%;
+    left:   -20%;
+    right:  -20%;
+    bottom: -20%;
+    transform: translateX(-15%)
+  }
+
+  .main-footer {
+    flex-direction: row;
+  }
+
+  .main-footer * {
+    width: 25%;
+  }
+
 
 }
 

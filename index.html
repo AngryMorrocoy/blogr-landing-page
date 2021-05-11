@@ -6,8 +6,8 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <!-- Google fonts -->
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- <link rel="preconnect" href="https://fonts.gstatic.com"> -->
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet"> -->
   <!-- ############ -->
   <link rel="stylesheet" href="styles.css">
   <script src="index.js"></script>
@@ -22,7 +22,7 @@
       <ul class="nav-menu" id="nav-menu">
         <li class="nav-menu__item">
           <button class="button nav-menu-item_btn" tabindex=0>Product</button>
-          <section class="nav-menu__content">
+          <section class="nav-menu__content" tabindex="-1">
             <a href="#" class="nav-menu__link">Overview</a>
             <a href="#" class="nav-menu__link">Pricing</a>
             <a href="#" class="nav-menu__link">Marketplace</a>
@@ -32,7 +32,7 @@
         </li>
         <li class="nav-menu__item">
           <button class="button nav-menu-item_btn" tabindex=0>Company</button>
-          <section class="nav-menu__content">
+          <section class="nav-menu__content" tabindex="-1">
             <a href="#" class="nav-menu__link">About</a>
             <a href="#" class="nav-menu__link">Team</a>
             <a href="#" class="nav-menu__link">Blog</a>
@@ -41,18 +41,18 @@
         </li>
         <li class="nav-menu__item">
           <button class="button nav-menu-item_btn" tabindex=0>Connect</button>
-          <section class="nav-menu__content" tabindex=0>
+          <section class="nav-menu__content" tabindex="-1" tabindex="-1">
             <a href="#" class="nav-menu__link">Contact</a>
             <a href="#" class="nav-menu__link">LinkedIn</a>
             <a href="#" class="nav-menu__link">Newsletter</a>
           </section>
         </li>
-        <section class="user-account">
+        <section class="user-account" tabindex="-1">
           <a class="button" id="login-button" href="">Login</a>
           <a class="button" id="sign-up-button" href="">Sign Up</a>
         </section>
       </ul>
-      <button class="button hamburger-icon" id="toggle-nav-menu-btn"></button>
+      <a class="button hamburger-icon" id="toggle-nav-menu-btn"></a>
     </nav>
     <div class="header-content">
       <h2 class="header-slogan">A modern publishing platform</h2>
@@ -65,8 +65,8 @@
   </header>
   <main class="main-content">
     <section class="main-section">
+      <h3 class="main-section__title">Designed for the future</h3>
       <article class="main-section_article">
-        <h3 class="main-section__article-title">Designed for the future</h3>
         <div id="editor-illustration" class="img-wrapper"></div>
       </article>
 
@@ -97,9 +97,9 @@
       </article>
     </section>
     <section class="main-section">
+      <h3 class="main-section__title">Free, open, simple</h3>
       <article class="main-section__article">
         <div id="laptop-illustration" class="img-wrapper"></div>
-        <h3 class="main-section__article-title">Free, open, simple</h3>
         <p class="main-section__article-content">
         Blogr is a free and open source application backed by a large community of helpful developers. It supports
         features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools,

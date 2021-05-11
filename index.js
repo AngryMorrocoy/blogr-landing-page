@@ -10,14 +10,31 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   toggleMenu_button.addEventListener('click', (event) => {
+    toggleMenu_button.classList.toggle('close-icon');
+    body.classList.toggle('no-scroll');
     navigationMenu.classList.toggle('is-visible');
-    toggleMenu_button.classList.toggle('close-icon')
-    body.classList.toggle('no-scroll')
   });
 
+  const options = {
+    threshold: .5
+  };
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting &&
+          entry.target.classList.contains('show-content')) {
+        entry.target.classList.remove('show-content');
+      }
+    });
+  }, options);
 
   for(let btn of menuContentToggler_buttons) {
+    observer.observe(btn);
     btn.addEventListener('click', (event) => {
+      for (let button of menuContentToggler_buttons) {
+        if (button != event.target) {
+          button.classList.remove('show-content');
+        }
+      }
       btn.classList.toggle('show-content');
     })
   }

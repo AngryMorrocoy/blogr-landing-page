@@ -701,6 +701,10 @@ body.no-scroll {
     width: 25%;
   }
 
+  .footer-section__link:hover, .footer-section__link:focus {
+    text-decoration: underline;
+  }
+
 
 }
 

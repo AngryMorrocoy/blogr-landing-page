@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
   const observer = new IntersectionObserver((entries, observer) => {
     entries.forEach((entry) => {
-      if (!entry.isIntersecting &&
+      if (this.window.innerWidth >= 1000 && !entry.isIntersecting &&
           entry.target.classList.contains('show-content')) {
         entry.target.classList.remove('show-content');
       }

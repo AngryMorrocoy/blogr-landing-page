@@ -281,7 +281,7 @@ body.no-scroll {
   text-align: center;
 }
 
-.main-section__title {
+.main-section__article-title {
   text-align: center;
   color: var(--color-very-dark-blue);
   padding: 0 4rem;
